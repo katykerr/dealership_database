@@ -46,3 +46,49 @@ CREATE TABLE invoice (
   FOREIGN KEY (car_id) REFERENCES car(car_id)
 );
 
+
+
+-- Functions
+
+-- add customer
+CREATE FUNCTION add_customer1(
+    customer_id INTEGER,
+    f_name VARCHAR(50),
+    l_name VARCHAR(50),
+    phone VARCHAR(20),
+    email VARCHAR(75)
+)
+RETURNS VOID
+LANGUAGE plpgsql
+AS 
+$MAIN$
+BEGIN
+  INSERT INTO customer(customer_id, first_name, last_name, phone, email)
+  VALUES (customer_id, f_name, l_name, phone, email);
+
+END
+$MAIN$
+;
+
+
+
+-- add car
+
+CREATE FUNCTION add_car2(
+  car_id INTEGER,
+  make VARCHAR(25),
+  model VARCHAR(25),
+  isNew
+)
+RETURNS VOID
+LANGUAGE plpgsql
+AS 
+$MAIN$
+BEGIN
+  INSERT INTO car(car_id, make, model,isNew)
+  VALUES (car_id, make, model, isNew);
+
+END
+$MAIN$
+;
+

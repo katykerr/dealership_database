@@ -35,7 +35,7 @@ INSERT INTO car (
 VALUES (
     'Jeep',
     'Grand Cherokee',
-    True
+    False
 );
 
 INSERT INTO car (
@@ -130,3 +130,10 @@ VALUES (
     2,
     1
 );
+
+--inesrt w/ function
+
+SELECT add_customer1(3,'Bob', 'Ranger', '903-210-1111','bobbyboi@mail.com')
+
+SELECT add_car2(3, 'Jeep', 'Wrangler', True)
+
