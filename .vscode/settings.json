@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "connectString": "postgres://urwbeafn:fEjmQhYF_6LD8MaYp8ke4nxIgg1sWzIk@peanut.db.elephantsql.com/urwbeafn",
+            "name": "dealership"
+        }
+    ]
+}
